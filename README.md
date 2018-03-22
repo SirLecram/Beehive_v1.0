@@ -1,1 +1,2 @@
 # Beehive
+It's a program which symulating a beehive. Every bee-worker could do a few of six jobs. The jobs allow for example to collect nectar or produce honey from nectar. Honey is necessary, because all bees have to eat. Every worker could be a specialist in one of 6 jobs. For example a worker who is specialist in NectarCollecting Job collect a 250 - 350 mg of nectar while a normal worker collect just 50 - 100mg/shift worked.
