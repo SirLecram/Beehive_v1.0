@@ -98,17 +98,19 @@ namespace Beehive
         }
         private bool LookForNectarCollectors(TownHall townHall, Job jobToDo, int numberOfShifts)
         {
-            
-            List<NectarCollector> collectorList = townHall.NectarCollectorList;
-            if(collectorList.Count != 0)
+            if(townHall.WorkersList.Count != 0)
             {
-                for (int i = 0; i < townHall.NumberOfNectarCollectors; i++)
+                for (int i = 0; i < townHall.WorkersList.Count; i++)
                 {
-                    NectarCollector worker = collectorList.ElementAt(i);
-                    if (worker.DoThisJob(jobToDo, numberOfShifts))
+                    Worker worker = townHall.WorkersList.ElementAt(i);
+                    if (worker is NectarCollector)
                     {
-                        MessageBox.Show("Przypisano pracę N/C nr: " + (i + 1).ToString());
-                        return true;
+                        worker = worker as NectarCollector;
+                        if (worker.DoThisJob(jobToDo, numberOfShifts))
+                        {
+                            MessageBox.Show("Przypisano pracę N/C nr: " + (i + 1).ToString());
+                            return true;
+                        }
                     }
                 }
                 
@@ -118,16 +120,19 @@ namespace Beehive
         }
         private bool LookForNectarConverter(TownHall townHall, Job jobToDo, int numberOfShifts)
         {
-            List<NectarConverter> converterList = townHall.NectarConverterList;
-            if(converterList.Count != 0)
+            if(townHall.WorkersList.Count !=0)
             {
-                for (int i = 0; i < townHall.NumberOfNectarConverters; i++)
+                for (int i = 0; i < townHall.WorkersList.Count; i++)
                 {
-                    NectarConverter worker = converterList.ElementAt(i);
-                    if (worker.DoThisJob(jobToDo, numberOfShifts))
+                    Worker worker = townHall.WorkersList.ElementAt(i);
+                    if (worker is NectarConverter)
                     {
-                        MessageBox.Show("Przypisano pracę pszczole NectarConverter nr: " + (i + 1).ToString());
-                        return true;
+                        worker = worker as NectarConverter;
+                        if (worker.DoThisJob(jobToDo, numberOfShifts))
+                        {
+                            MessageBox.Show("Przypisano pracę pszczole NectarConverter nr: " + (i + 1).ToString());
+                            return true;
+                        }
                     }
                 }
             }

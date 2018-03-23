@@ -14,14 +14,10 @@ namespace Beehive
     {
         public double NumberOfNectarCollectors { get; private set; }
         public double NumberOfNectarConverters { get; private set; }
-        public List<NectarCollector> NectarCollectorList { get; private set; }
-        public List<NectarConverter> NectarConverterList { get; private set; }
         public Warehouse Warehouse { get; private set; }
 
         public TownHall(int honeyAmount) : base()
         {
-            NectarCollectorList = new List<NectarCollector>();
-            NectarConverterList = new List<NectarConverter>();
             Warehouse = new Warehouse(honeyAmount);
             const int starterNumberOfBees = 15;
             for (int i = 0; i < starterNumberOfBees; i++)
@@ -44,12 +40,10 @@ namespace Beehive
             {
                 case 1:
                     WorkersList.Add(new NectarCollector(weight));
-                    NectarCollectorList.Add((NectarCollector)WorkersList.LastOrDefault());
                     NumberOfWorkers++; NumberOfNectarCollectors++;
                     break;
                 case 2:
                     WorkersList.Add(new NectarConverter(weight));
-                    NectarConverterList.Add((NectarConverter)WorkersList.LastOrDefault());
                     NumberOfWorkers++; NumberOfNectarConverters++;
                     break;
                 default:
@@ -77,20 +71,10 @@ namespace Beehive
                 int randomWorker = random.Next(0, WorkersList.Count);
                 Worker worker = WorkersList.ElementAt(randomWorker);
                 
-                if(NectarCollectorList.Exists(collector => collector.IndexOfBee == worker.IndexOfBee))
-                {
-                    NectarCollector nectarCollector = null;
-                    nectarCollector = NectarCollectorList.Find(collector => collector.IndexOfBee == worker.IndexOfBee);
-                    NectarCollectorList.Remove(nectarCollector);
+                if(worker is NectarCollector)
                     NumberOfNectarCollectors--;
-                }
-                if (NectarConverterList.Exists(converter => converter.IndexOfBee == worker.IndexOfBee))
-                {
-                    NectarConverter nectarConverter = null;
-                    nectarConverter = NectarConverterList.Find(converter => converter.IndexOfBee == worker.IndexOfBee);
-                    NectarConverterList.Remove(nectarConverter);
+                if (worker is NectarConverter)
                     NumberOfNectarConverters--;
-                }
                 WorkersList.Remove(worker); 
                 NumberOfWorkers--;
             }
