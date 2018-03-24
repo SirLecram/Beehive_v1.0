@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace Beehive
 {
     /// <summary>
@@ -20,29 +21,30 @@ namespace Beehive
     /// </summary>
     public partial class MainWindow : Window
     {
-        internal Queen Queen { get; private set; }
-        internal TownHall TownHall { get; private set; }
+       // internal Queen Queen { get; private set; }
+       // internal TownHall TownHall { get; private set; }
         public MainWindow()
         {
             InitializeComponent();
             InitializeObjects();
-            UpdateLabels();
+            //UpdateLabels();
         }
 
-        public void UpdateLabels()
+     /*   public void UpdateLabels()
         {
             amountOfHoney.Text = "Zapasy miodu: " + TownHall.Warehouse.AmountOfHoney.ToString() + " mg.";
             amountOfNectar.Text = "Zapasy nektaru: " + TownHall.Warehouse.AmountOfNectar.ToString() + " mg.";
             aliveWorkers.Text = "Ilość pszczół robotnic: " + Building.NumberOfWorkers.ToString() + ".";
-        }
+        }*/
         private void InitializeObjects()
         {
-           // Warehouse = new Warehouse(2000);
-            TownHall = new TownHall(2000);
-            Queen = new Queen(300);
+            // Warehouse = new Warehouse(2000);
+            // TownHall = new TownHall(2000);
+            // Queen = new Queen(300);
+            queenView.SetReportTextBox(shiftsReports);
         }
         
-        private void AssignWork_Click(object sender, RoutedEventArgs e)
+     /*   private void AssignWork_Click(object sender, RoutedEventArgs e)
         {
             Job actualJob = (Job)Enum.Parse(typeof(Job), workerBeeJob.SelectedIndex.ToString());
             if (Queen.AssignWork(TownHall, actualJob, shifts.Value))
@@ -63,6 +65,6 @@ namespace Beehive
         {
             TownHall.KillBee();
             UpdateLabels();
-        }
+        }*/
     }
 }

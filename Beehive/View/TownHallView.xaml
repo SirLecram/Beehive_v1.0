@@ -1,0 +1,90 @@
+﻿<UserControl x:Class="Beehive.View.TownHallView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Beehive.View"
+             xmlns:vievmodel="using:Beehive.VievModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="200">
+    <UserControl.Resources>
+        
+    </UserControl.Resources>
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.4*"/>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Wszystkie pszczoły:" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center"
+                       VerticalAlignment="Center" FontSize="20"/>
+        <TextBlock Text="{Binding AllBees}" Name="allBeesNumber" Grid.Row="2" Grid.ColumnSpan="2"
+                       HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="18"/>
+        <Separator Grid.Row="2" Grid.ColumnSpan="2" Margin="15, 0, 15, 0" >
+            <Separator.Background>
+                <SolidColorBrush Color="YellowGreen" Opacity="0.5"/>
+            </Separator.Background>
+        </Separator>
+        <TextBlock Text="Zbieracze nektaru" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center"
+                       VerticalAlignment="Center" FontSize="20"/>
+        <StackPanel Grid.Row="4">
+            <TextBlock Text="Wszyscy:" FontSize="18" HorizontalAlignment="Center"/>
+            <TextBlock Text="{Binding AllCollectors}" Name="allCollectorNumber" FontSize="18"
+                       HorizontalAlignment="Center" VerticalAlignment="Top" />
+        </StackPanel>
+        <StackPanel Grid.Row="4" Grid.Column="1">
+            <TextBlock Text="Wolni:" FontSize="18" HorizontalAlignment="Center"/>
+            <TextBlock Text="{Binding FreeCollectors}" Name="freeCollectorNumber" FontSize="18"
+                       HorizontalAlignment="Center" VerticalAlignment="Top" />
+        </StackPanel>
+        <Separator Grid.Row="2" Grid.ColumnSpan="2" Margin="15, 0, 15, 0" >
+            <Separator.Background>
+                <SolidColorBrush Color="YellowGreen" Opacity="0.5"/>
+            </Separator.Background>
+        </Separator>
+        <TextBlock Text="Przerabiacze miodu:" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Center"
+                       VerticalAlignment="Center" FontSize="20"/>
+        <StackPanel Grid.Row="6">
+            <TextBlock Text="Wszyscy:" FontSize="18" HorizontalAlignment="Center"/>
+            <TextBlock Text="{Binding AllConverters}" Name="allConvertersNumber" FontSize="18"
+                       HorizontalAlignment="Center" VerticalAlignment="Top" />
+        </StackPanel>
+        <StackPanel Grid.Row="6" Grid.Column="1">
+            <TextBlock Text="Wolni:" FontSize="18" HorizontalAlignment="Center"/>
+            <TextBlock Text="{Binding FreeConverters}" Name="freeConvertersNumber" FontSize="18"
+                       HorizontalAlignment="Center" VerticalAlignment="Top" />
+        </StackPanel>
+        <Separator Grid.Row="2" Grid.ColumnSpan="2" Margin="15, 0, 15, 0" >
+            <Separator.Background>
+                <SolidColorBrush Color="YellowGreen" Opacity="0.5"/>
+            </Separator.Background>
+        </Separator>
+        <TextBlock Text="Zwykłe robotnice:" Grid.Row="7" Grid.ColumnSpan="2" HorizontalAlignment="Center"
+                       VerticalAlignment="Center" FontSize="20"/>
+        <StackPanel Grid.Row="8">
+            <TextBlock Text="Wszyscy:" FontSize="18" HorizontalAlignment="Center"/>
+            <TextBlock Text="{Binding AllWokrers}" Name="allWorkersNumber" FontSize="18"
+                           HorizontalAlignment="Center" VerticalAlignment="Top" />
+        </StackPanel>
+        <StackPanel Grid.Row="8" Grid.Column="1">
+            <TextBlock Text="Wolni:" FontSize="18" HorizontalAlignment="Center"/>
+            <TextBlock Text="{Binding FreeWorkers}" Name="freeWorkersNumber" FontSize="18"
+                       HorizontalAlignment="Center" VerticalAlignment="Top" />
+        </StackPanel>
+        <Separator Grid.Row="2" Grid.ColumnSpan="2" Margin="15, 0, 15, 0" >
+            <Separator.Background>
+                <SolidColorBrush Color="YellowGreen" Opacity="0.5"/>
+            </Separator.Background>
+        </Separator>
+    </Grid>
+</UserControl>

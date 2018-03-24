@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Beehive
+namespace Beehive.Model
 {
     /// <summary>
     /// Class represents Queen of Beehive. It is responsilbe for managing other bees.
@@ -33,7 +34,7 @@ namespace Beehive
     /// <returns></returns>
         public bool AssignWork(TownHall townHall, Job jobToDo, int numberOfShifts)
         {
-            List<Worker> workerList = townHall.WorkersList;
+            ObservableCollection<Worker> workerList = townHall.WorkersList;
             if (LookForNectarCollectors(townHall, jobToDo, numberOfShifts))
                 return true;
             if (LookForNectarConverter(townHall, jobToDo, numberOfShifts))

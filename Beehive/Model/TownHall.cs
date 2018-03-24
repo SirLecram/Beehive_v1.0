@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Beehive
+namespace Beehive.Model
 {
     /// <summary>
     /// Class responsilbe for storing data about bees. It also contains methods responsible for 

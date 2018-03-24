@@ -36,6 +36,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -61,9 +63,19 @@
     <Compile Include="Building.cs" />
     <Compile Include="NectarCollector.cs" />
     <Compile Include="NectarConverter.cs" />
-    <Compile Include="Queen.cs" />
-    <Compile Include="TownHall.cs" />
-    <Compile Include="Warehouse.cs" />
+    <Compile Include="Model\Queen.cs" />
+    <Compile Include="Model\TownHall.cs" />
+    <Compile Include="Model\Warehouse.cs" />
+    <Compile Include="ViewModel\StatisticsVievModel.cs" />
+    <Compile Include="View\QueenView.xaml.cs">
+      <DependentUpon>QueenView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TownHallView.xaml.cs">
+      <DependentUpon>TownHallView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WarehouseView.xaml.cs">
+      <DependentUpon>WarehouseView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Worker.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -78,6 +90,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\QueenView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TownHallView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WarehouseView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -105,5 +129,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

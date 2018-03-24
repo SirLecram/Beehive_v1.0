@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Beehive
+namespace Beehive.Model
 {
     /// <summary>
     /// Class responsible for imitating a Warehouse. In warehouse is stored honey and nectar.
@@ -16,7 +17,7 @@ namespace Beehive
         public double AmountOfNectar { get; private set; }
         
         #region Constructors
-        public Warehouse(List<Worker> workersList, double amountOfHoney) :this(amountOfHoney)
+        public Warehouse(ObservableCollection<Worker> workersList, double amountOfHoney) :this(amountOfHoney)
         {
             WorkersList = workersList;
         }

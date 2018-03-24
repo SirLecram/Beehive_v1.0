@@ -14,3 +14,10 @@ C:\Users\MarcelPC\Desktop\Na studia\Informatyka\C#\Ksiazka\Beehive\Beehive\obj\D
 C:\Users\MarcelPC\Desktop\Na studia\Informatyka\C#\Ksiazka\Beehive\Beehive\obj\Debug\Beehive.exe
 C:\Users\MarcelPC\Desktop\Na studia\Informatyka\C#\Ksiazka\Beehive\Beehive\obj\Debug\Beehive.pdb
 C:\Users\MarcelPC\Desktop\Na studia\Informatyka\C#\Ksiazka\Beehive\Beehive\bin\Debug\WpfControlLibrary1.pdb
+C:\Users\MarcelPC\Desktop\Na studia\Informatyka\C#\Ksiazka\Beehive\Beehive\obj\Debug\View\TownHallView.g.cs
+C:\Users\MarcelPC\Desktop\Na studia\Informatyka\C#\Ksiazka\Beehive\Beehive\obj\Debug\View\WarehouseView.g.cs
+C:\Users\MarcelPC\Desktop\Na studia\Informatyka\C#\Ksiazka\Beehive\Beehive\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\MarcelPC\Desktop\Na studia\Informatyka\C#\Ksiazka\Beehive\Beehive\obj\Debug\View\TownHallView.baml
+C:\Users\MarcelPC\Desktop\Na studia\Informatyka\C#\Ksiazka\Beehive\Beehive\obj\Debug\View\WarehouseView.baml
+C:\Users\MarcelPC\Desktop\Na studia\Informatyka\C#\Ksiazka\Beehive\Beehive\obj\Debug\View\QueenView.g.cs
+C:\Users\MarcelPC\Desktop\Na studia\Informatyka\C#\Ksiazka\Beehive\Beehive\obj\Debug\View\QueenView.baml

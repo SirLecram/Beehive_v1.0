@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Beehive"
         xmlns:WpfControlLibrary1="clr-namespace:WpfControlLibrary1;assembly=WpfControlLibrary1" x:Class="Beehive.MainWindow"
         mc:Ignorable="d"
+        xmlns:viev="clr-namespace:Beehive.View"
         Title="MainWindow" Height="600" Width="800" Background="Cornsilk" WindowStyle="ThreeDBorderWindow"
     ResizeMode="NoResize">
     <Grid Margin="10">
@@ -24,7 +25,8 @@
         </Grid.ColumnDefinitions>
         <GroupBox Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2"
                   Content="Przydział prac" BorderBrush="YellowGreen" />
-        <StackPanel Margin="7, 15, 0, 0" Grid.Row="0" Grid.Column="0" >
+        <viev:QueenView Grid.RowSpan="2" Grid.ColumnSpan="3" x:Name="queenView"/>
+        <!--  <StackPanel Margin="7, 15, 0, 0" Grid.Row="0" Grid.Column="0" >
             <TextBlock Text="Zadanie robotnicy:" />
             <ComboBox x:Name="workerBeeJob"  BorderBrush="YellowGreen">
                 <ComboBoxItem Content="Zbieranie nektaru" IsSelected="True" Tag="0"/>
@@ -43,7 +45,7 @@
         <Button Content="Przypisz tę pracę pszczole" Grid.Row="1" Grid.ColumnSpan="2" Margin="15, 5, 15, 5"
                 Name="assignWork" BorderBrush="YellowGreen" VerticalAlignment="Center" FontSize="15" Click="AssignWork_Click"/>
         <Button Grid.Column="2" Grid.RowSpan="2" Margin="10" Content="Rozpocznij &#xa; następną &#xa;  zmianę"
-                BorderBrush="YellowGreen" FontSize="15" Click="StartShift_Click"/>
+                BorderBrush="YellowGreen" FontSize="15" Click="StartShift_Click"/> -->
         <GroupBox Content="Zapasy" Grid.Row="2" Grid.ColumnSpan="3" BorderBrush="YellowGreen"/>
         <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.ColumnSpan="3" HorizontalAlignment="Center"
                     VerticalAlignment="Bottom">
@@ -53,9 +55,14 @@
         </StackPanel>
         <TextBox Name="shiftsReports" Grid.Row="3" Grid.ColumnSpan="3" Margin="10" Background="White"
                  BorderBrush="YellowGreen"/>
-        <Button Name="testButton" Grid.Row="3" Grid.Column="2" Content="TESTBUTTON" 
-                HorizontalAlignment="Right" VerticalAlignment="Top" Click="TestButton_Click"/>
-        <Grid Name="statistics" Grid.Column="3" Grid.RowSpan="4">
+     <!--   <Button Name="testButton" Grid.Row="3" Grid.Column="2" Content="TESTBUTTON" 
+                HorizontalAlignment="Right" VerticalAlignment="Top" Click="TestButton_Click"/> -->
+        <viev:TownHallView Grid.RowSpan="4" Grid.Column="3" VerticalAlignment="Top" Height="450"/>
+        <viev:WarehouseView Grid.RowSpan="4" Grid.Column="3" VerticalAlignment="Bottom"
+                            Height="100"/>
+        <GroupBox Content="Statystyki" BorderBrush="YellowGreen" Margin="5" Grid.RowSpan="4"
+                      Grid.Column="3"/>
+        <!--   <Grid Name="statistics" Grid.Column="3" Grid.RowSpan="4">
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.4*"/>
                 <RowDefinition />
@@ -145,6 +152,6 @@
                        VerticalAlignment="Center"/>
             <TextBlock Text="10 mg" FontSize="18" HorizontalAlignment="Center" Grid.Row="10"
                        VerticalAlignment="Center" Grid.Column="1" Name="nectarAmount"/>
-        </Grid>
+        </Grid> -->
     </Grid>
 </Window>
