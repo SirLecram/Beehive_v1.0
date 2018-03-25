@@ -9,7 +9,7 @@
              xmlns:viewmodel="clr-namespace:Beehive.ViewModel"
              d:DesignHeight="150" d:DesignWidth="400">
     <UserControl.Resources>
-        
+
     </UserControl.Resources>
     <Grid Name="gridDataContext">
         <Grid.RowDefinitions>

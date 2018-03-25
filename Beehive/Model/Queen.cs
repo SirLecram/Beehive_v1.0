@@ -25,13 +25,14 @@ namespace Beehive.Model
             QueensHoneyConsumptionPerMg = 0.15;
         }
 
-    /// <summary>
-    /// Method which shearches the WorkerList to assign work to the right bee.
-    /// </summary>
-    /// <param name="townHall"></param>
-    /// <param name="jobToDo"></param>
-    /// <param name="numberOfShifts"></param>
-    /// <returns></returns>
+        #region Main Queen mechanics (Workers managment)
+        /// <summary>
+        /// Method which shearches the WorkerList to assign work to the right bee.
+        /// </summary>
+        /// <param name="townHall"></param>
+        /// <param name="jobToDo"></param>
+        /// <param name="numberOfShifts"></param>
+        /// <returns></returns>
         public bool AssignWork(TownHall townHall, Job jobToDo, int numberOfShifts)
         {
             ObservableCollection<Worker> workerList = townHall.WorkersList;
@@ -97,6 +98,9 @@ namespace Beehive.Model
             return consumption;
 
         }
+        #endregion
+
+        #region Additional helper-methods
         private bool LookForNectarCollectors(TownHall townHall, Job jobToDo, int numberOfShifts)
         {
             if(townHall.WorkersList.Count != 0)
@@ -140,5 +144,6 @@ namespace Beehive.Model
             
             return false;
         }
+        #endregion
     }
 }

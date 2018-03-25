@@ -22,13 +22,15 @@ namespace Beehive.View
     /// </summary>
     public partial class QueenView : UserControl
     {
+        private TextBox shiftsReports = null;
+        internal StatisticsViewModel statisticViewModel = new StatisticsViewModel();
+
         public QueenView()
         {
             InitializeComponent();
             InitBinding();
         }
-        private TextBox shiftsReports = null;
-        private StatisticsVievModel statisticViewModel = new StatisticsVievModel();
+        
         private void InitBinding()
         {
             gridDataContext.DataContext = statisticViewModel;
@@ -41,28 +43,14 @@ namespace Beehive.View
         private void AssignWork_Click(object sender, RoutedEventArgs e)
         {
             Job actualJob = (Job)Enum.Parse(typeof(Job), workerBeeJob.SelectedIndex.ToString());
-            shiftsReports.Text += workerBeeJob.SelectedIndex.ToString() +
+            shiftsReports.Text += workerBeeJob.SelectionBoxItem.ToString() +
                 statisticViewModel.AssignWork(actualJob, shifts.Value);
         }
 
         private void StartShift_Click(object sender, RoutedEventArgs e)
         {
-          /*  shiftsReports.Text += Queen.StartNewShift(TownHall.Warehouse);
-            townHall.Warehouse.GiveHoney(TownHall);
-            townHall.IncreaseThePopulation(Queen.ShiftNumber);
-            UpdateLabels();*/
+            shiftsReports.Text += statisticViewModel.StartNextShift();
         }
 
-        private void TestButton_Click(object sender, RoutedEventArgs e)
-        {
-          /*  townHall.KillBee();
-            UpdateLabels();*/
-        }
-        public void UpdateLabels()
-        {
-           /* amountOfHoney.Text = "Zapasy miodu: " + TownHall.Warehouse.AmountOfHoney.ToString() + " mg.";
-            amountOfNectar.Text = "Zapasy nektaru: " + TownHall.Warehouse.AmountOfNectar.ToString() + " mg.";
-            aliveWorkers.Text = "Ilość pszczół robotnic: " + Building.NumberOfWorkers.ToString() + ".";*/
-        }
     }
 }

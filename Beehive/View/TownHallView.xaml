@@ -10,7 +10,7 @@
     <UserControl.Resources>
         
     </UserControl.Resources>
-    <Grid >
+    <Grid Name="statistics">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.4*"/>
             <RowDefinition />
@@ -29,7 +29,7 @@
         <TextBlock Text="Wszystkie pszczoły:" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center"
                        VerticalAlignment="Center" FontSize="20"/>
         <TextBlock Text="{Binding AllBees}" Name="allBeesNumber" Grid.Row="2" Grid.ColumnSpan="2"
-                       HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="18"/>
+                       HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="18" Foreground="#FFD10C0C"/>
         <Separator Grid.Row="2" Grid.ColumnSpan="2" Margin="15, 0, 15, 0" >
             <Separator.Background>
                 <SolidColorBrush Color="YellowGreen" Opacity="0.5"/>
@@ -40,14 +40,14 @@
         <StackPanel Grid.Row="4">
             <TextBlock Text="Wszyscy:" FontSize="18" HorizontalAlignment="Center"/>
             <TextBlock Text="{Binding AllCollectors}" Name="allCollectorNumber" FontSize="18"
-                       HorizontalAlignment="Center" VerticalAlignment="Top" />
+                       HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFD10C0C"/>
         </StackPanel>
         <StackPanel Grid.Row="4" Grid.Column="1">
             <TextBlock Text="Wolni:" FontSize="18" HorizontalAlignment="Center"/>
             <TextBlock Text="{Binding FreeCollectors}" Name="freeCollectorNumber" FontSize="18"
-                       HorizontalAlignment="Center" VerticalAlignment="Top" />
+                       HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFD10C0C"/>
         </StackPanel>
-        <Separator Grid.Row="2" Grid.ColumnSpan="2" Margin="15, 0, 15, 0" >
+        <Separator Grid.Row="5" Grid.ColumnSpan="2" Margin="15, 0, 15, 0" VerticalAlignment="Top">
             <Separator.Background>
                 <SolidColorBrush Color="YellowGreen" Opacity="0.5"/>
             </Separator.Background>
@@ -57,14 +57,14 @@
         <StackPanel Grid.Row="6">
             <TextBlock Text="Wszyscy:" FontSize="18" HorizontalAlignment="Center"/>
             <TextBlock Text="{Binding AllConverters}" Name="allConvertersNumber" FontSize="18"
-                       HorizontalAlignment="Center" VerticalAlignment="Top" />
+                       HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFD10C0C"/>
         </StackPanel>
         <StackPanel Grid.Row="6" Grid.Column="1">
             <TextBlock Text="Wolni:" FontSize="18" HorizontalAlignment="Center"/>
             <TextBlock Text="{Binding FreeConverters}" Name="freeConvertersNumber" FontSize="18"
-                       HorizontalAlignment="Center" VerticalAlignment="Top" />
+                       HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFD10C0C"/>
         </StackPanel>
-        <Separator Grid.Row="2" Grid.ColumnSpan="2" Margin="15, 0, 15, 0" >
+        <Separator Grid.Row="7" Grid.ColumnSpan="2" Margin="15, 0, 15, 0" VerticalAlignment="Top">
             <Separator.Background>
                 <SolidColorBrush Color="YellowGreen" Opacity="0.5"/>
             </Separator.Background>
@@ -73,15 +73,15 @@
                        VerticalAlignment="Center" FontSize="20"/>
         <StackPanel Grid.Row="8">
             <TextBlock Text="Wszyscy:" FontSize="18" HorizontalAlignment="Center"/>
-            <TextBlock Text="{Binding AllWokrers}" Name="allWorkersNumber" FontSize="18"
-                           HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <TextBlock Text="{Binding AllWorkers}" Name="allWorkersNumber" FontSize="18"
+                           HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFD10C0C"/>
         </StackPanel>
         <StackPanel Grid.Row="8" Grid.Column="1">
             <TextBlock Text="Wolni:" FontSize="18" HorizontalAlignment="Center"/>
             <TextBlock Text="{Binding FreeWorkers}" Name="freeWorkersNumber" FontSize="18"
-                       HorizontalAlignment="Center" VerticalAlignment="Top" />
+                       HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFD10C0C"/>
         </StackPanel>
-        <Separator Grid.Row="2" Grid.ColumnSpan="2" Margin="15, 0, 15, 0" >
+        <Separator Grid.Row="9" Grid.ColumnSpan="2" Margin="15, 0, 15, 0" VerticalAlignment="Bottom">
             <Separator.Background>
                 <SolidColorBrush Color="YellowGreen" Opacity="0.5"/>
             </Separator.Background>

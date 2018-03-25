@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Beehive.ViewModel;
 
 namespace Beehive.View
 {
@@ -20,9 +21,21 @@ namespace Beehive.View
     /// </summary>
     public partial class WarehouseView : UserControl
     {
+        private StatisticsViewModel statisticsViewModel = null;
+
         public WarehouseView()
         {
             InitializeComponent();
+        }
+
+        private void InitBinding()
+        {
+            statistics.DataContext = statisticsViewModel;
+        }
+        public void SetStatisticViewModel(QueenView queenView)
+        {
+            statisticsViewModel = queenView.statisticViewModel;
+            InitBinding();
         }
     }
 }

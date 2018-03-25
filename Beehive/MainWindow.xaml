@@ -57,9 +57,10 @@
                  BorderBrush="YellowGreen"/>
      <!--   <Button Name="testButton" Grid.Row="3" Grid.Column="2" Content="TESTBUTTON" 
                 HorizontalAlignment="Right" VerticalAlignment="Top" Click="TestButton_Click"/> -->
-        <viev:TownHallView Grid.RowSpan="4" Grid.Column="3" VerticalAlignment="Top" Height="450"/>
+        <viev:TownHallView Grid.RowSpan="4" Grid.Column="3" VerticalAlignment="Top" Height="450"
+                           x:Name="townHallView"/>
         <viev:WarehouseView Grid.RowSpan="4" Grid.Column="3" VerticalAlignment="Bottom"
-                            Height="100"/>
+                            Height="100" x:Name="warehouseView"/>
         <GroupBox Content="Statystyki" BorderBrush="YellowGreen" Margin="5" Grid.RowSpan="4"
                       Grid.Column="3"/>
         <!--   <Grid Name="statistics" Grid.Column="3" Grid.RowSpan="4">

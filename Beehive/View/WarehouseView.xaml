@@ -5,12 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Beehive.View"
              mc:Ignorable="d" 
-             xmlns:vievmodel="using:Beehive.VievModel"
+             xmlns:viewmodel="clr-namespace:Beehive.ViewModel"
              d:DesignHeight="150" d:DesignWidth="200">
     <UserControl.Resources>
-        
+      <!--  <viewmodel:StatisticsViewModel x:Key="viewModel" /> -->
     </UserControl.Resources>
-    <Grid Name="statistics" Grid.Column="3" Grid.RowSpan="4">
+    <Grid Name="statistics" Grid.Column="3" Grid.RowSpan="4" >
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
@@ -24,14 +24,14 @@
                        VerticalAlignment="Center"/>
         <TextBlock FontSize="18" HorizontalAlignment="Center" Grid.Row="0"
                        VerticalAlignment="Center" Grid.Column="1">
-            <Run Text="{Binding Honey}"></Run>
+            <Run Name="textHoney" Text="{Binding Path=Honey, Mode=OneWay}"></Run>
             <Run> mg</Run>
         </TextBlock>
         <TextBlock Text="Nektar:" FontSize="18" HorizontalAlignment="Center" Grid.Row="1"
                        VerticalAlignment="Center"/>
         <TextBlock FontSize="18" HorizontalAlignment="Center" Grid.Row="1"
                        VerticalAlignment="Center" Grid.Column="1">
-            <Run Text="{Binding Nectar}"></Run>
+            <Run Name="textNectar" Text="{Binding Path=Nectar, Mode=OneWay}"></Run>
             <Run> mg</Run>
         </TextBlock>
     </Grid>

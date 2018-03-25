@@ -26,6 +26,7 @@ namespace Beehive.Model
             }
         }
 
+        #region Main TownHall mechanics
         public void BornNewBee(List<Job> jobNewWorkerCanDo)
         {
             int weight = random.Next(100, 301);
@@ -70,26 +71,27 @@ namespace Beehive.Model
             {
                 int randomWorker = random.Next(0, WorkersList.Count);
                 Worker worker = WorkersList.ElementAt(randomWorker);
-                
-                if(worker is NectarCollector)
+
+                if (worker is NectarCollector)
                     NumberOfNectarCollectors--;
                 if (worker is NectarConverter)
                     NumberOfNectarConverters--;
-                WorkersList.Remove(worker); 
+                WorkersList.Remove(worker);
                 NumberOfWorkers--;
             }
         }
         internal void IncreaseThePopulation(int shiftNr)
         {
             int shiftNumber = shiftNr;
-            if(shiftNumber%3==2)
+            if (shiftNumber % 3 == 2)
             {
                 int howManyBees = random.Next(1, 4);
-                for(int i = 0; i<howManyBees; i++)
+                for (int i = 0; i < howManyBees; i++)
                 {
                     BornNewBee();
                 }
             }
         }
+        #endregion
     }
 }
